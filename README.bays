@@ -1,0 +1,47 @@
+The 5-bit LFSR in these programs come from the following website:
+http://www.xilinx.com/support/documentation/
+application_notes/xapp052.pdf
+
+LFSR program, lfsr.c
+
+This program requires the GNU Scientific Library.
+
+sudo apt-get install libgsl0-dev
+
+This program shows the LFSR process, cycle by cycle.
+There is a 50% chance that the bit array will match
+on the first cycle.
+If that happens, re-run the program, until the program
+runs continuously.
+
+Usage: lfsr | less
+
+-----------------------------------------------------
+
+Bays-Durham program, baysdurham.c
+
+This program requires the new curses package
+and the GNU Scientific Library (see above).
+
+sudo apt-get install libncurses-dev
+
+Usage: baysdurham
+
+This program uses an array of 32  5-bit LFSRs
+and a 1024 element bit array
+The period length of a 5-bit LFSR is 31
+The period length of 32 5-bit LFSRs is 1023
+The period length of the 1024 element bit array
+with a Bays-Durham shuffling is the factorial of 1024
+1024! is approximately 5.24e+2639
+This program runs until the bit array matches the
+original bit array.
+There is a 50% chance that the bit array will match
+on the first cycle.
+If that happens, re-run the program, until the program
+runs continuously.
+Run this program continuously for at least 24 hours
+to see how many cycles it processes without matching
+the original bit array.
+
+press 'q' to exit
