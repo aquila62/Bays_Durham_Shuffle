@@ -214,14 +214,14 @@ int main()
          {
 	 break;
 	 } /* if bit array matched */
-      if (i >= 10000000)
+      if (i >= 100000000)         /* one hundred million */
          {
 	 char str[128];
          move(5,28);
          sprintf(str,"Bays-Durham Shuffle");
          addstr(str);
 	 move(10,25);
-	 sprintf(str,"%9.0f Million", cycle / 1000000.0);
+	 sprintf(str,"%9.1f Billion", cycle / 1000000000.0);
 	 addstr(str);
          ch = getch();
          if (ch == 'q') break;
