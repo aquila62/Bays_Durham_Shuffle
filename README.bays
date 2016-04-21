@@ -1,8 +1,9 @@
-The 5-bit LFSR in these programs come from the following website:
+LFSR is an acronym for linear feedback shift register.
+The 5-bit LFSR in these programs comes from the following website:
 http://www.xilinx.com/support/documentation/
 application_notes/xapp052.pdf
 
-LFSR program, lfsr.c
+Program, lfsr.c
 
 This program requires the GNU Scientific Library.
 
@@ -28,12 +29,12 @@ sudo apt-get install libncurses-dev
 Usage: baysdurham
 
 This program uses an array of 32  5-bit LFSRs
-and a 1024 element bit array
-The period length of a 5-bit LFSR is 31
-The period length of 32 5-bit LFSRs is 1023
+and an array of 1024 bits.
+The period length of a 5-bit LFSR is 31.
+The period length of 32 5-bit LFSRs is 992.
 The period length of the 1024 element bit array
-with a Bays-Durham shuffling is the factorial of 1024
-1024! is approximately 5.24e+2639
+with a Bays-Durham shuffling is the factorial of 1024.
+1024! is approximately 5.24e+2639.
 This program runs until the bit array matches the
 original bit array.
 There is a 50% chance that the bit array will match
@@ -43,5 +44,13 @@ runs continuously.
 Run this program continuously for at least 24 hours
 to see how many cycles it processes without matching
 the original bit array.
+
+I have run the program for over 800 Billion cycles without
+matching the original bit array.  This is illustrates how
+the Bays-Durham shuffle extends the period length of a very
+weak random number generator.  With a stronger random
+number generator, like etaus, the probability of matching
+the original state array is even lower because of the
+32=bit unsigned integers in the state array.
 
 press 'q' to exit
