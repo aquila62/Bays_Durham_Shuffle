@@ -45,7 +45,7 @@ Run this program continuously for at least 24 hours
 to see how many cycles it processes without matching
 the original bit array.
 
-I have run the program for over 800 Billion cycles without
+I have run the program for over two trillion cycles without
 matching the original bit array.  This is illustrates how
 the Bays-Durham shuffle extends the period length of a very
 weak random number generator.  With a stronger random
