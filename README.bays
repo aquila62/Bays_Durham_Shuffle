@@ -45,12 +45,12 @@ Run this program continuously for at least 24 hours
 to see how many cycles it processes without matching
 the original bit array.
 
-I have run the program for over two trillion cycles without
-matching the original bit array.  This is illustrates how
+I have run the program for over nine trillion cycles without
+matching the original bit array.  This illustrates how
 the Bays-Durham shuffle extends the period length of a very
 weak random number generator.  With a stronger random
 number generator, like etaus, the probability of matching
 the original state array is even lower because of the
-32=bit unsigned integers in the state array.
+32-bit unsigned integers in the state array.
 
 press 'q' to exit
